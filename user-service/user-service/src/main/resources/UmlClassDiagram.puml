@@ -1,0 +1,144 @@
+@startuml
+
+class User{
+    + id : String
+    + username : String
+    + email : String
+    + password : String
+    + name : String
+    + surname: String
+    + instrumentList : List<String>
+    + tagList : List<String>
+    + bio : String
+    + location : String
+    + available : boolean
+    + invitationList : List<InvitationId>
+    + applyList : List<InvitationId>
+    + roles : List<String>
+    + String getId()
+    + void setId(String)
+    + String getUsername()
+    + void setUsername(String)
+    + String getEmail()
+    + void setEmail(String)
+    + String getPassword()
+    + void setPassword(String)
+    + String getName()
+    + void setName(String)
+    + String getSurname()
+    + void setSurname(String)
+    + List<String> getInstrumentList()
+    + void setInstrumentList(List<String>)
+    + List<String> getTagList()
+    + void setTagList(List<String>)
+    + String getBio()
+    + void setBio(String)
+    + String getLocation()
+    + void setLocation(String)
+    + boolean isAvailable()
+    + void setAvailable(boolean)
+    + List<InvitationId> getInvitationList()
+    + void setInvitationList(List<InvitationId>)
+    + List<InvitationId> getApplyList()
+    + void setApplyList(List<InvitationId>)
+    + List<String> getRoles()
+    + void setRoles(List<String>)
+}
+
+class UserController{
+    + userService : UserService
+    @Autowired
+    + mongoTemplate : MongoTemplate
+    @Autowired
+    + rabbitTemplate : RabbitTemplate
+    UserController(userService)
+    + List<User> getUsers()
+    + ResponseEntity<User> saveUser(User)
+    + void refreshToken(HttpServletRequest, HttpServletResponse) throws IOException
+    + ResponseEntity<MessageResponse> updateInfo(UserUpdateRequest)
+    + ResponseEntity<UserProfileInfoResponse> userInfo()
+}
+
+interface UserService{
+    + User saveUser(User)
+    + List<User> getUsers()
+    + Boolean existsByUsername(String)
+    + Boolean existsByEmail(String)
+    + boolean updateInvitationList(InvitationId)
+    + boolan deleteInvitationFromInvitationList(InvitationId)
+    + boolean deleteApplyFromApplyList(InvitationId)
+    + boolean addApplyToApplyList(InvitationId)
+}
+
+class UserServiceImpl implements UserService{
+    + User saveUser(User)
+    + List<User> getUsers()
+    + Boolean existsByUsername(String)
+    + Boolean existsByEmail(String)
+    + boolean updateInvitationList(InvitationId)
+    + boolan deleteInvitationFromInvitationList(InvitationId)
+    + boolean deleteApplyFromApplyList(InvitationId)
+    + boolean addApplyToApplyList(InvitationId)
+    + List<InvitationId> removeInvitationById(List<InvitationId>, String)
+}
+
+class WebSecurityConfig extends WebSecurityConfigurerAdapter{
+    +userDetailsService : UserDetailsService
+    WebSecurityConfig(userDetailsService)
+    + void configure(AuthenticationManagerBuilder) throws IOException
+    + void configure(HttpSecurity) throws Exception
+    + @Bean BCryptPasswordEncoder myPasswordEncoder()
+    + @Bean AuthenticationManager authenticationManagerBean() throws Exception
+}
+
+class UserDetailsServiceImpl implements UserDetailsService{
+    + userRepository: UserRepository
+    UserDetailsServiceImpl(UserRepository)
+    + UserDetails loadUserByUsername(String)  throws UserNotFoundException
+}
+
+class InvitationId{
+    + className = "invitation" : String
+    + id : String
+    + creator : String
+    InvitationId(String, String)
+    + String getId()
+    + void setId(String)
+    + String getCreator()
+    + void setCreator(String)
+}
+
+class CustomAuthorizationFilter extends OncePerRequestFilter{
+    + doFilterInternal(HttpServletRequest, HttpServletResponse, FilterChain) throws ServletException, IOException
+}
+
+
+class MQConfig{
+    @Configuration: RabbitMQ
+    + AUTH_QUEUE = "auth_queue" :String
+    + AUTH_EXCHANGE = "auth_exchange" : String
+    + AUTH_ROUTING_KEY = "auth_routingKey" : String
+    + INV_LIST_UPDATE_QUEUE = "inv_list_update_queue" : String
+    + INV_LIST_UPDATE_EXCHANGE = "inv_list_update_exchange" : String
+    + INV_LIST_UPDATE_ROUTING_KEY = "inv_list_update_routingKey" : String
+    + APPLY_LIST_UPDATE_QUEUE = "apply_list_update_queue" : String
+    + APPLY_LIST_UPDATE_EXCHANGE = "apply_list_update_exchange" : String
+    + APPLY_LIST_UPDATE_ROUTING_KEY = "apply_list_update_routingKey" : String
+    + Jackson2JsonMessageConverter messageConverter()
+    + Queue authQueue()
+    + Queue invListUpdateQueue()
+    + Queue applyListUpdateQueue()
+    + TopicExchange authExchange()
+    + TopicExchange invListUpdateExchange()
+    + TopicExchange applyListUpdateExchange()
+    + Binding authBinding()
+    + Binding invListUpdateBinding()
+    + Binding applyListUpdateBinding()
+    + AmqpTemplate template(ConnectionFactory)
+
+}
+
+
+Person <|-- Employee
+
+@enduml
