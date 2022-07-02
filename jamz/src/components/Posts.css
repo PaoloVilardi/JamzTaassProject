@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
+
+.posts__item__header {
+  height: 110px;
+  width: 110px;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  z-index: -1;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  position: absolute;
+  left: -50px;
+  top: 10px;
+  transform: translateY(-50%);
+}
+.posts__item__profileImg {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+}
+
+
+  .posts {
+  height: 100%;
+  width: 100%;
+  height: 100vh;
+  padding-top: 20rem;
+  background-color: #242424;
+  background-clip: padding-box;
+  
+}
+
+.posts__container {
+  background-color: #242424;
+}
+
+ .posts__item {
+   margin-bottom: 5%;
+  display: inline-block;
+  position: relative;
+  padding: 6rem 3rem 6rem 6rem;
+  background-color: #5e5e5e;
+  max-width: 1200px;
+  width: 1000px;
+  height: 500px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+}
+
+
+
+.posts__item .posts__item__info h1{
+  font-size: large;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  margin-top: 20px;
+}
+
+.posts__item .posts__item__info .posts__item__datetime{
+  font-size: medium;
+  opacity: 30%;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+.posts__item .posts__item__info .posts__item__creator {
+  position: absolute;
+  top: 5px;
+  left: 400px;
+}
+
+.posts__item__creator img {
+  height: 5em;
+  width: 5em;
+  border-radius: 100%;
+  /* margin: 20%; */
+  display: block;
+  /* max-width: 100%; */
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+
+.posts__item__creator h4 {
+  position: absolute;
+  top: 20px;
+}
+
+.posts__item__creator p {
+  position: absolute;
+  top: 40px;
+}
+
+.posts__item__title {
+  position: absolute;
+  left: 5px;
+  top: 60px;
+  width: 100%;
+}
+
+.posts__item__description {
+  position: absolute;
+  left: 20px;
+  top: 150px;
+  width: 100%;
+}
+
+.posts__item__description p{
+  padding: 30px;
+}
+
+
+
+.posts__item .posts__item__info p{
+  font-size: medium;
+  position: absolute;
+}
+
+.posts__item .posts__item__info button{
+  font-size: large;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.posts__item__footer {
+    position: absolute;
+    left: 20px;
+	  bottom: 10px;
+    display: flex;
+}
+
+.posts__item .posts__item__info .posts__item__genre{
+  border: 1px solid #2D2747;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+  margin-right: 20px;
+	padding: 7px;
+}
+
+.posts__item .posts__item__info .posts__item__genre h6{
+	font-size: 12px;
+}
+
+.posts__item .posts__item__info .posts__item__type{
+  border: 1px solid #2D2747;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin-right: 20px;
+	padding: 7px;
+}
+
+.posts__item .posts__item__info .posts__item__type h6{
+	font-size: 12px;
+}
+
+.posts__item .posts__item__info .posts__item__instrument{
+  border: 1px solid #2D2747;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin-right: 20px;
+	padding: 7px;
+}
+
+.posts__item .posts__item__info .posts__item__instrument h6{
+	font-size: 12px;
+}
+
+.posts__item .posts__item__info .posts__item__tagList{
+  width: 600px;
+}
+
+.posts__item .posts__item__info .posts__item__tagList h6{
+  font-size: 12px;
+}
+
+
+.posts__item .posts__item__info .posts__item__tagList ul li{
+  border: 1px solid #2D2747;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+}
+
+.posts__item__apply__button {
+  display: inline-block;
+  margin-left: 100px;
+  
+}
+
+.posts__item .posts__item__info .posts__item__open{
+  position: absolute;
+  color: green;
+  top: 5px;
+  left: 30px;
+}
+
+.posts__item .posts__item__info .posts__item__closed{
+  position: absolute;
+  color: red;
+  top: 5px;
+  left: 30px;
+}
+
+
+.btn_primary {
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  padding: 1.5rem 2rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+  transition: all .2s ease-in;
+  text-decoration: none;
+}
+
+.btn_primary:hover {
+  box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+}
+
+
+#posts__search__button { 
+  position: absolute;
+  top: 140px;
+  left: 80px;
+}
+
+.posts__advanced__search {
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  width: 1400px;
+  
+}
+
+.posts__advanced__search__form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.posts__advanced__search__form {
+  background-color: #FFFFFF;
+	padding: 0 50px;
+  background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	transition: all 0.6s ease-in-out;
+
+}
+
+.posts__advanced__search__form input {
+  background-color: #eee;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  
+}
+
+.posts__advanced__search__form label {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  
+}
+
+.posts__advanced__search__form button {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+#posts__advanced__search__button{
+  background-color:#ff5e62;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.posts__advanced__search__form select {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+#posts__advanced__search__close__button {
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  border: none;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: transparent;
+  color: #1da1f2;
+  font: inherit;
+  text-indent: 100%;
+  cursor: pointer;
+}
+#posts__advanced__search__close__button:focus {
+  outline: solid 0 transparent;
+  box-shadow: 0 0 0 2px #8ed0f9;
+}
+#posts__advanced__search__close__button:hover {
+  background: rgba(29, 161, 142, 0.1);
+}
+#posts__advanced__search__close__button:before, #posts__advanced__search__close__button:after {
+  position: absolute;
+  top: 15%;
+  left: calc(50% - .0625em);
+  width: 0.125em;
+  height: 70%;
+  border-radius: 0.125em;
+  transform: rotate(45deg);
+  background: currentcolor;
+  content: "";
+}
+#posts__advanced__search__close__button:after {
+  transform: rotate(-45deg);
+}
+

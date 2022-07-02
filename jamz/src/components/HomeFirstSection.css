@@ -1,0 +1,36 @@
+.home-sections {
+    padding: 4em;
+    background-color: #0a0a0a;
+}
+
+.home-first-section{
+    margin-bottom: 4em; 
+    height: 400px;
+}
+
+.home-first-section-image {
+    position: absolute;
+    left: 20px;
+}
+
+.home-first-section-image img{
+    width: 400px;
+    height: 400px;
+}
+
+.home-first-section-description{
+    color: aliceblue;
+    position: absolute;
+    left: 440px;
+}
+
+.home-first-section-description h2 {
+    position: absolute;
+    left: 700px;
+}
+
+.home-first-section-description p {
+    margin-top: 50px;
+    
+}
+

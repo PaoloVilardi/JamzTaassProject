@@ -1,0 +1,76 @@
+.my-profile-invitation-inline {
+    margin-bottom: 20px;
+}
+
+.my-profile-invitation-inline p{
+    display: inline-block;
+    margin: 2px;
+    font-size: small;
+}
+
+.my-profile-invitation-inline h6{
+    display: inline-block;
+    margin: 2px;
+    font-size: small;
+}
+
+.my-profile-invitation-inline strong{
+    font-size: small;
+}
+
+.my-profile-invitation-inline .my-profile-invitation-title-open{
+    color: green;
+}
+.my-profile-invitation-inline .my-profile-invitation-title-closed{
+    color: red;
+}
+
+.my-profile-invitation-inline span{
+    margin: 2px;
+    font-size: small;
+}
+
+.my-profile-invitation-candidateList ul li{
+    font-size: small;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.my-profile-invitation-tagList{
+    width: 600px;
+  }
+  
+.my-profile-invitation-tagList h6{
+font-size: 12px;
+}
+  
+  
+.my-profile-invitation-tagList ul li{
+border: 1px solid #2D2747;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 7px 7px 0;
+    padding: 7px;
+}
+
+.my-profile-invitation-acceptance-button{
+    width: 30px;
+    height: 30px;
+}
+
+.my-profile-invitation-close-button{
+    margin-top: 40px;
+}
+
+
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+  }
+
+  /* Solid border */
+hr.solid {
+    margin-top: 20px;
+    border-top: 3px solid #bbb;
+  }

@@ -1,0 +1,30 @@
+.home-third-section{
+    margin-bottom: 4em; 
+    height: 400px;
+}
+
+.home-third-section-image {
+    position: absolute;
+    left: 20px;
+}
+
+.home-third-section-image img{
+    width: 400px;
+    height: 400px;
+}
+
+.home-third-section-description{
+    color: aliceblue;
+    position: absolute;
+    left: 440px;
+}
+
+.home-third-section-description h2 {
+    position: absolute;
+    left: 700px;
+}
+
+.home-third-section-description p {
+    margin-top: 50px;
+    
+}

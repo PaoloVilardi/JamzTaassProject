@@ -1,0 +1,32 @@
+.home-second-section{
+    background-color: #242424;
+    margin-bottom: 4em; 
+    height: 400px;
+}
+
+.home-second-section-image {
+    position: absolute;
+    left: 20px;
+}
+
+.home-second-section-image img{
+    width: 400px;
+    height: 400px;
+}
+
+.home-second-section-description{
+    color: aliceblue;
+    position: absolute;
+    left: 440px;
+
+}
+
+.home-second-section-description h2 {
+    position: absolute;
+    left: 700px;
+}
+
+.home-second-section-description p {
+    margin-top: 50px;
+    
+}
