@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">JAMZ</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <string name="home_search_text">Search for musicians all around the world who have the same
+        interests as you. Customize the search using tags, music genre and much more to find the
+        perfect match for you
+    </string>
+    <string name="home_organize_text">Once you have found your JAMZ buddy/ies, you are ready to
+        organize your jam, gig or band audition and start feeling the new experience.
+    </string>
+    <string name="home_unite_text">Under this single but powerful rule, you can enjoy your musical
+        journey with new people and therefore find new ideas to enrich your music life.
+    </string>
+</resources>

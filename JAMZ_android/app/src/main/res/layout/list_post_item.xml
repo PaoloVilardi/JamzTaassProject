@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/light_dark_bg">
+
+
+
+    <LinearLayout
+        android:id="@+id/postListItemHeaderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/postItemCreatorLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+        <TextView
+            android:id="@+id/postListItem_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="Open"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/postListItemApplyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="apply"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/postItemCreatorLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postListItemHeaderLayout"
+        app:layout_constraintBottom_toTopOf="@+id/postItemTitleLinearLayout"
+        >
+
+        <TextView
+            android:id="@+id/postListItem_creatorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Creator: "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/postListItem_profilePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_avatar_sample"
+            android:adjustViewBounds="true"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:id="@+id/postListItem_creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Creator"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postItemTitleLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/postItemCreatorLinearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/postItemGenreLinearLayout">
+
+        <TextView
+            android:id="@+id/postListItem_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title: "
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/postListItem_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:layout_margin="10dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postItemGenreLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/postItemTitleLinearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/postItemTypeLinearLayout">
+
+        <TextView
+            android:id="@+id/postListItem_genreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genre: "
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/postListItem_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="genre"
+            android:layout_margin="10dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postItemTypeLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/postItemGenreLinearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/postItemInstrumentLinearLayout">
+
+        <TextView
+            android:id="@+id/postListItem_typeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type: "
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/postListItem_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="type"
+            android:layout_margin="10dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postItemInstrumentLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/postItemTypeLinearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/postListItemDescription">
+
+        <TextView
+            android:id="@+id/postListItem_instrumentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instrument: "
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/postListItem_instrument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="instrument"
+            android:layout_margin="10dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/postListItemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:text="description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postItemInstrumentLinearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/postListItemTagsLinearLayout"/>
+
+    <LinearLayout
+        android:id="@+id/postListItemTagsLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postListItemDescription"
+        app:layout_constraintBottom_toTopOf="@+id/view2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAGS: "
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:id="@+id/postListItemTagsNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="None"
+            android:layout_margin="5dp"
+            android:visibility="gone"/>
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/postListItem_tagsChipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="50dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#C2C2C2"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/postListItemTagsLinearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
